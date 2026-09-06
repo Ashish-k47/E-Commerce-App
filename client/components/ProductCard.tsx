@@ -24,8 +24,29 @@ export default function ProductCard({product}: ProductCardProps) {
                 </TouchableOpacity>
 
                 {/* is Featured */}
+                {product.isFeatured && (
+                    <View className='absolute top-2 left-2 bg-black px-2 py-1 rounded'>
+                        <Text className='text-white text-xs font-bold uppercase'>Featured</Text>
+                    </View>
+                )}
 
             </View>
+
+            {/* product info */}
+
+            <View className='p-3'>
+                <View className='flex-row items-center mb-1'>
+                    <Ionicons name='star' size={14} color='#FFD700'/>
+                    <Text className='text-secondary text-xs ml-1'>4.6</Text>
+                </View>
+                <Text className='text-primary font-medium text-sm mb-1 ' numberOfLines={1}>{product.name}</Text>
+                <View className='flex-row items-center'>
+                    <Text className='text-primary font-bold text-base'>
+                        ${product.price.toFixed(2)}
+                    </Text>
+                </View>
+            </View>
+
         </TouchableOpacity>
     </Link>
   )
