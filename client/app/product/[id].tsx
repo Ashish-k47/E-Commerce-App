@@ -9,7 +9,7 @@ export default function ProductDetails() {
     
   return (
     <View>
-      <Text>ProductDetails</Text>
+      <Text>Produc tDetails</Text>
     </View>
   )
 }
